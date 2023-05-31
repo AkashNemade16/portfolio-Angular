@@ -6,26 +6,32 @@ import { Skills } from './skillsInterface';
   styleUrls: ['./skills.component.sass']
 })
 export class SkillsComponent {
+
+ 
   skillList:Skills[] = [
     {
       skill:"HTML",
-      experience:"4 years"
+      experience:"4 years of experience"
     },
     {
       skill:"CSS",
-      experience:"4 years"
+      experience:"4 years of experience"
     },
     {
       skill:"ReactJs",
-      experience:"4 years"
+      experience:"4 years of experience"
     },
     {
       skill:"Accessibility",
-      experience:"4 years"
+      experience:"4 years of experience"
+    },
+    {
+      skill:"Javascript",
+      experience:"4 years of experience"
     },
     {
       skill:"Angular",
-      experience:"1 year"
+      experience:"1 year of experience"
     },
   ]
 }

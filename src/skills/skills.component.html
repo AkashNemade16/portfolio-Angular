@@ -1,7 +1,8 @@
 <div class="skills">
     <div class="skills-div">
-        <div  class="skill-with-skills">
-            {{skillList}}
+        <div *ngFor="let item of skillList" class="skill-with-skills">
+            <p>{{item.skill}}</p>
+            <p>{{item.experience}}</p>
         </div>
     </div>
 </div>
