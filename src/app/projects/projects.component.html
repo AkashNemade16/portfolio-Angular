@@ -1,6 +1,14 @@
 <div class="project-container">
     <div class="project-cta">
-        <h1>Projects</h1>
-        <button>Contact me</button>
+        <div class="header-project">
+            <h1>Projects</h1>
+        <button>CONTACT ME</button>
+        </div>
+        <div class="projects">
+            <div class="name-projects" *ngFor="let item of ProjectList">
+                <a href="https://dictionarywebapp.vercel.app/"><img class="image" src={{item.img}}></a>
+                {{item.name}}
+            </div>
+        </div>
     </div>
 </div>
