@@ -7,6 +7,7 @@ import { HeaderComponent } from '../Header/Header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     SkillsComponent,
     ProjectsComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
