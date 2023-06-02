@@ -22,20 +22,6 @@ export class ProjectsComponent {
         skillsUsed:'ReactJs HTML CSS',
         name:'Dictionary Web app'
       },
-      {
-        img:"../../assets/dictionary.png",
-        skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app'
-      },
-      {
-        img:"../../assets/dictionary.png",
-        skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app'
-      },
-      {
-        img:"../../assets/dictionary.png",
-        skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app'
-      }
+      
     ]
 }

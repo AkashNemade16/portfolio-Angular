@@ -6,9 +6,17 @@
         </div>
         <div class="projects">
             <div class="name-projects" *ngFor="let item of ProjectList">
-                <a href="https://dictionarywebapp.vercel.app/"><img class="image" src={{item.img}}></a>
-                <div>{{item.name}}</div>
-                <div>{{item.skillsUsed}}</div>
+              
+                <img class="image" src={{item.img}}>
+                <div class="overlay"></div>
+                <div class="buttons-hide">
+                    <button>VIEW PROJECT</button>
+                    <button>VIEW CODE</button>
+                </div>
+                <div class="project-info-container">
+                    <div class="pro-title">{{item.name}}</div>
+                    <div class="pro-skills-used">{{item.skillsUsed}}</div>
+                </div>
             </div>
         </div>
     </div>
