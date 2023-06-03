@@ -31,7 +31,6 @@ export class ContactFormComponent {
 
   submit=(e:Event)=>{
     e.preventDefault
-    console.log('hello')
     this.sendData
   }
 }
