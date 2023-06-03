@@ -10,17 +10,23 @@ export class ProjectsComponent {
       {
         img:"../../assets/dictionary.png",
         skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app'
+        name:'Dictionary Web app',
+        href:'https://dictionarywebapp.vercel.app/',
+        gitLink:'https://github.com/AkashNemade16/dictionarywebapp'
       },
       {
         img:"../../assets/dictionary.png",
         skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app'
+        name:'Dictionary Web app',
+        href:'',
+        gitLink:''
       },
       {
         img:"../../assets/dictionary.png",
         skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app'
+        name:'Dictionary Web app',
+        href:'',
+        gitLink:''
       },
       
     ]

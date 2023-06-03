@@ -8,11 +8,11 @@
             <div class="name-projects" *ngFor="let item of ProjectList">
               
                 <img class="image" src={{item.img}}>
-                <div class="overlay"></div>
                 <div class="buttons-hide">
-                    <button>VIEW PROJECT</button>
-                    <button>VIEW CODE</button>
+                    <a href={{item.href}}><button>VIEW PROJECT</button></a>
+                    <a href={{item.gitLink}}><button>VIEW CODE</button></a>
                 </div>
+
                 <div class="project-info-container">
                     <div class="pro-title">{{item.name}}</div>
                     <div class="pro-skills-used">{{item.skillsUsed}}</div>

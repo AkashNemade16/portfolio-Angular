@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
