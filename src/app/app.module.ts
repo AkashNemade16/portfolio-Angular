@@ -10,6 +10,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: 'contact', component: ContactFormComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +25,10 @@ import { RouterModule, Routes } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

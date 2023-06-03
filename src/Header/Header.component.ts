@@ -9,4 +9,8 @@ export class HeaderComponent {
   faLinkedin = faLinkedin
   faGithub = faGithub
   faTwitter = faTwitter
+
+  navigate = () => {
+    document.getElementById('contactform')?.scrollIntoView({behavior:'smooth'})
+  }
 }

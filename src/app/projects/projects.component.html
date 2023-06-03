@@ -2,7 +2,7 @@
     <div class="project-cta">
         <div class="header-project">
             <h1>Projects</h1>
-        <button>CONTACT ME</button>
+            <button (click)="navigate()" routerLink="/contact">CONTACT ME</button>
         </div>
         <div class="projects">
             <div class="name-projects" *ngFor="let item of ProjectList">

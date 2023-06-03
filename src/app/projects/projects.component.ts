@@ -6,7 +6,10 @@ import { Projects } from './projectsInterface';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent {
-    ProjectList:Projects[] = [
+  navigate = () => {
+    document.getElementById('contactform')?.scrollIntoView({behavior:'smooth' })
+  }
+    ProjectList:Projects[] = [ 
       {
         img:"../../assets/dictionary.png",
         skillsUsed:'ReactJs HTML CSS',
@@ -15,19 +18,11 @@ export class ProjectsComponent {
         gitLink:'https://github.com/AkashNemade16/dictionarywebapp'
       },
       {
-        img:"../../assets/dictionary.png",
-        skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app',
-        href:'',
-        gitLink:''
-      },
-      {
-        img:"../../assets/dictionary.png",
-        skillsUsed:'ReactJs HTML CSS',
-        name:'Dictionary Web app',
-        href:'',
-        gitLink:''
-      },
-      
+        img:"../../assets/Portfolio.png",
+        skillsUsed:'Angular HTML Sass',
+        name:'Design Portfolio',
+        href:'https://akashnemade.com/',
+        gitLink:'https://github.com/AkashNemade16/portfolio-Angular'
+      }
     ]
 }
