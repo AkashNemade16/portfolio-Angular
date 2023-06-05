@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 
 export class ContactFormComponent {
   alert:boolean = true
+  data:any
   constructor(private http:HttpClient){
 
   }
@@ -24,9 +25,6 @@ export class ContactFormComponent {
       this.http.post('http://localhost:3001/api/insert',form['value'])
       .subscribe(()=> {this.alert=false})  
     }
-  
       form.reset()
-    
-    
   }
 }
