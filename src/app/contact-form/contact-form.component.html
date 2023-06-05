@@ -21,12 +21,12 @@
         required minlength="2" maxlength="15"
         ngModel
         />
-        <div *ngIf="name.errors && form.submitted" class="exclamatory-mark">!</div>
+        <div *ngIf="alert && name.errors && form.submitted" class="exclamatory-mark">!</div>
         </div>
-        <p *ngIf="form.value.name==='' && form.submitted" class="error">Field required</p>
-        <p *ngIf="form.value.name!==''&& form.submitted &&name.errors" class="error">Sorry,Invalid Format here</p>
+        <p *ngIf="alert &&!form.value.name && form.submitted " class="error">Field required</p>
+        <p *ngIf="alert &&form.value.name && form.submitted &&name.errors && form.touched" class="error">Sorry,Invalid Format here</p>
       </div>
-        
+        <!-- email -->
       <div class="form-input">
         <div class="form-error">
       <input
@@ -38,12 +38,12 @@
         placeholder="EMAIL"
         ngModel
       />
-      <div *ngIf="email.errors && form.submitted" class="exclamatory-mark">!</div>
+      <div *ngIf="alert &&email.errors && form.submitted" class="exclamatory-mark">!</div>
       </div>
-      <p *ngIf="form.value.email==='' && form.submitted" class="error">Field required</p>
-        <p *ngIf="form.value.email!==''&& form.submitted && email.errors" class="error">Sorry,Invalid Format here</p>
+      <p *ngIf="alert &&!form.value.email && form.submitted" class="error">Field required</p>
+        <p *ngIf="alert &&form.value.email && form.submitted && email.errors" class="error">Sorry,Invalid Format here</p>
       </div>
-
+      <!-- message -->
       <div class="form-input">
         <div class="form-error">
      <textarea
@@ -57,10 +57,10 @@
         >
      </textarea>
     
-     <div *ngIf="message.errors && form.submitted" class="exclamatory-mark">!</div>
+     <div *ngIf="alert &&message.errors && form.submitted" class="exclamatory-mark">!</div>
     </div>
-     <p *ngIf="form.value.message==='' && form.submitted" class="error">Field required</p>
-     <p *ngIf="form.value.message!==''&& form.submitted &&message.errors" class="error">Sorry,Invalid Format here</p>
+     <p *ngIf="alert &&!form.value.message && form.submitted" class="error">Field required</p>
+     <p *ngIf="alert &&form.value.message&& form.submitted &&message.errors" class="error">Sorry,Invalid Format here</p>
    
      </div>
       <div class="button">

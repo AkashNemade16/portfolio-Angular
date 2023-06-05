@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 
 export class ContactFormComponent {
+  alert:boolean = true
   constructor(private http:HttpClient){
 
   }
@@ -19,8 +20,13 @@ export class ContactFormComponent {
   
   submit(form:NgForm){
     console.log('form submitted',form)
-    // this.http.post('http://localhost:3001/api/insert',form['value'])
-    // .subscribe(res=>console.log(res));
-    form.reset({})
+    if(form['value'].name && form['value'].email && form['value'].message ){
+      this.http.post('http://localhost:3001/api/insert',form['value'])
+      .subscribe(()=> {this.alert=false})  
+    }
+  
+      form.reset()
+    
+    
   }
 }
