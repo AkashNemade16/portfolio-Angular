@@ -9,29 +9,63 @@
         fill in the form, and I’ll get back to you as soon as possible.
       </div>
     </div>
-    <form onsubmit="submit()" class="input-form">
-      <input 
-        #name 
+    <form #form="ngForm" (ngSubmit)="submit(form)" class="input-form">
+      <div class="form-input">
+        <div class="form-error">
+        <input 
+        #name = 'ngModel' 
+        name="name"
         id="name" 
         type="text" 
-        required 
-        placeholder="NAME" />
+        placeholder="NAME" 
+        required minlength="2" maxlength="15"
+        ngModel
+        />
+        <div *ngIf="name.errors && form.submitted" class="exclamatory-mark">!</div>
+        </div>
+        <p *ngIf="form.value.name==='' && form.submitted" class="error">Field required</p>
+        <p *ngIf="form.value.name!==''&& form.submitted &&name.errors" class="error">Sorry,Invalid Format here</p>
+      </div>
+        
+      <div class="form-input">
+        <div class="form-error">
       <input
-        #email
+        #email = 'ngModel'
+        name="email"
         type="email"
         id="email"
-        required
+        required email 
         placeholder="EMAIL"
+        ngModel
       />
-      <input #message 
-        id="message" 
-        type="text" 
-        required 
-        placeholder="MESSAGE" />
+      <div *ngIf="email.errors && form.submitted" class="exclamatory-mark">!</div>
+      </div>
+      <p *ngIf="form.value.email==='' && form.submitted" class="error">Field required</p>
+        <p *ngIf="form.value.email!==''&& form.submitted && email.errors" class="error">Sorry,Invalid Format here</p>
+      </div>
+
+      <div class="form-input">
+        <div class="form-error">
+     <textarea
+        #message = "ngModel"
+        name="message"
+        placeholder="MESSAGE"
+        id="message"
+        type="text"
+        ngModel
+        required minlength="2" maxlength="100"
+        >
+     </textarea>
+    
+     <div *ngIf="message.errors && form.submitted" class="exclamatory-mark">!</div>
+    </div>
+     <p *ngIf="form.value.message==='' && form.submitted" class="error">Field required</p>
+     <p *ngIf="form.value.message!==''&& form.submitted &&message.errors" class="error">Sorry,Invalid Format here</p>
+   
+     </div>
       <div class="button">
         <button
-          type="button"
-          (click)="sendData(name.value, email.value, message.value)"
+          type="submit"    
         >
           SEND MESSAGE
         </button>

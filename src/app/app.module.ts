@@ -9,6 +9,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'contact', component: ContactFormComponent }
@@ -26,6 +27,7 @@ const routes: Routes = [
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],

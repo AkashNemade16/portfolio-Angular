@@ -12,14 +12,14 @@ export class ProjectsComponent {
     ProjectList:Projects[] = [ 
       {
         img:"../../assets/dictionary.png",
-        skillsUsed:'ReactJs HTML CSS',
+        skillsUsed:'ReactJs HTML CSS Javascript',
         name:'Dictionary Web app',
         href:'https://dictionarywebapp.vercel.app/',
         gitLink:'https://github.com/AkashNemade16/dictionarywebapp'
       },
       {
         img:"../../assets/Portfolio.png",
-        skillsUsed:'Angular HTML Sass',
+        skillsUsed:'Angular HTML Sass Typescript',
         name:'Design Portfolio',
         href:'https://akashnemade.com/',
         gitLink:'https://github.com/AkashNemade16/portfolio-Angular'
