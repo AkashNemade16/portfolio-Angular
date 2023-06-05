@@ -19,12 +19,15 @@ export class ContactFormComponent {
   faGithub = faGithub
   faTwitter = faTwitter
   
-  submit(form:NgForm){
-    console.log('form submitted',form)
-    if(form['value'].name && form['value'].email && form['value'].message ){
-      this.http.post('http://localhost:3001/api/insert',form['value'])
-      .subscribe(()=> {this.alert=false})  
-    }
-      form.reset()
-  }
+  //submit(){
+    // console.log('form submitted',form)
+    // if(form['value'].name && form['value'].email && form['value'].message ){
+    //   // this.http.post('http://localhost:3001/api/insert',form['value'])
+    //   // .subscribe(()=> {this.alert=false}) 
+    //   this.http.post('"https://formsubmit.co/aksh.akash@gmail.com" ',form['value'])
+      
+    // }
+    //   form.reset()
+
+  //}
 }

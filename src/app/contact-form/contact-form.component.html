@@ -1,67 +1,86 @@
 <div id="contactform" class="contact-form">
-    <div class="contact-inputform">
-        <div class="contactBox">
-            <div class="contact">
-                <h1>CONTACT</h1>
-            </div>
-            <div class="info">
-                I would love to hear about your project and how I could help. Please
-                fill in the form, and I’ll get back to you as soon as possible.
-            </div>
-        </div>
-        <form #form="ngForm" (ngSubmit)="submit(form)" class="input-form">
-            <div class="form-input">
-                <div class="form-error">
-                    <input #name='ngModel' name="name" id="name" type="text" placeholder="NAME" required minlength="2"
-                        maxlength="15" ngModel />
-                    <div *ngIf="alert && (name.errors && form.submitted) || (name.errors && form.touched)" class="exclamatory-mark">!</div>
-                </div>
-                <p *ngIf="alert &&!form.value.name && form.submitted " class="error">Field required</p>
-                <p *ngIf="alert &&(form.value.name && name.errors && form.touched)" class="error">
-                    Sorry,Invalid Format here</p>
-            </div>
-            <!-- email -->
-            <div class="form-input">
-                <div class="form-error">
-                    <input #email='ngModel' name="email" type="email" id="email" required email placeholder="EMAIL"
-                        ngModel />
-                    <div *ngIf="alert &&(email.errors && form.submitted) || (email.errors && form.touched)" class="exclamatory-mark">!</div>
-                </div>
-                <p *ngIf="alert &&!form.value.email && form.submitted" class="error">Field required</p>
-                <p *ngIf="alert && (form.value.email && email.errors && form.touched)" class="error">Sorry,Invalid Format
-                    here</p>
-            </div>
-            <!-- message -->
-            <div class="form-input">
-                <div class="form-error">
-                    <textarea #message="ngModel" name="message" placeholder="MESSAGE" id="message" type="text" ngModel
-                        required minlength="2" maxlength="100">
-     </textarea>
-
-                    <div *ngIf="alert &&(message.errors && form.submitted)||(message.errors && form.touched)" class="exclamatory-mark">!</div>
-                </div>
-                <p *ngIf="alert &&!form.value.message && form.submitted" class="error">Field required</p>
-                <p *ngIf="alert && (form.value.message&& message.errors && form.touched)" class="error">Sorry,Invalid
-                    Format here</p>
-
-            </div>
-            <div class="button">
-                <button [disabled]="(name.errors || email.errors || message.errors) && form.touched" type="submit">
-                    SEND MESSAGE
-                </button>
-            </div>
-        </form>
+  <div class="contact-inputform">
+    <div class="contactBox">
+      <div class="contact">
+        <h1>CONTACT</h1>
+      </div>
+      <div class="info">
+        I would love to hear about your project and how I could help. Please
+        fill in the form, and I’ll get back to you as soon as possible.
+      </div>
     </div>
-    <footer>
-        <div class="footer">
-            <h2>Akash Nemade</h2>
-            <div class="icons-container">
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/sky-n-663856259/"><fa-icon [icon]="faLinkedin"></fa-icon></a>
-                    <a href="https://github.com/AkashNemade16"><fa-icon [icon]="faGithub"></fa-icon></a>
-                    <a href="https://twitter.com/AkashNemade16"><fa-icon [icon]="faTwitter"></fa-icon></a>
-                </div>
-            </div>
+    <form
+      ngNoForm
+      action="https://formsubmit.co/aksh.akash@gmail.com"
+      method="POST"
+      class="input-form"
+    >
+      <div class="form-input">
+        <div class="form-error">
+          <input
+            name="name"
+            id="name"
+            type="text"
+            placeholder="NAME"
+            required
+            minlength="2"
+            maxlength="15"
+          />
         </div>
-    </footer>
+      </div>
+
+      <div class="form-input">
+        <div class="form-error">
+          <input
+            #email="ngModel"
+            name="email"
+            type="email"
+            id="email"
+            required
+            email
+            placeholder="EMAIL"
+            ngModel
+          />
+        </div>
+      </div>
+
+      <div class="form-input">
+        <div class="form-error">
+          <textarea
+            #message="ngModel"
+            name="message"
+            placeholder="MESSAGE"
+            id="message"
+            type="text"
+            ngModel
+            required
+            minlength="2"
+            maxlength="100"
+          >
+          </textarea>
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit">SEND MESSAGE</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="footer">
+      <h2>Akash Nemade</h2>
+      <div class="icons-container">
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/sky-n-663856259/"
+            ><fa-icon [icon]="faLinkedin"></fa-icon
+          ></a>
+          <a href="https://github.com/AkashNemade16"
+            ><fa-icon [icon]="faGithub"></fa-icon
+          ></a>
+          <a href="https://twitter.com/AkashNemade16"
+            ><fa-icon [icon]="faTwitter"></fa-icon
+          ></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
