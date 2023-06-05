@@ -20,6 +20,7 @@ app.post("/api/insert",(req,res)=>{
     db.query(sqlInsert,[name,email,message],(err,result)=>{
     console.log(err)
 })
+    res.send({status:'success'})
 })
 
 
