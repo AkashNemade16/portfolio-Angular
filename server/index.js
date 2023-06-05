@@ -3,11 +3,15 @@ const express = require('express')
 const app = express()
 const mySql = require('mysql')
 const cors = require('cors')
+const path = require('path')
+require('dotenv').config({path:"./../src/.env"})
+
+console.log(process.env.USER1)
 const db = mySql.createPool({
-    host:'srv565.hstgr.io',
-    user:'u176740262_akashNemade',
-    password:'Portfolio$123',
-    database:'u176740262_portfolio'
+    host:process.env.HOST,
+    user:process.env.USER1,
+    password:process.env.PASSWORD,
+    database:process.env.DATABASE
 });
 app.use(cors());
 app.use(express.json());

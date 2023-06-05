@@ -33,5 +33,9 @@ export class SkillsComponent {
       skill:"Angular",
       experience:"1 year of experience"
     },
+    {
+      skill:"Typescript",
+      experience:"1 year of experience"
+    },
   ]
 }
