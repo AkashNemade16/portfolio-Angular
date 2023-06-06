@@ -11,6 +11,9 @@ import { NgForm } from '@angular/forms';
 
 export class ContactFormComponent {
   alert:boolean = true
+  email:string = 'aksh.akash@gmail.com'
+  encodedEmail:any=encodeURIComponent(this.email)
+  url:any = `https://formsubmit.co/${this.encodedEmail}`
   data:any
   constructor(private http:HttpClient){
 
